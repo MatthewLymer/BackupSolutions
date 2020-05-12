@@ -23,7 +23,7 @@ data "google_project" "project" {
 }
 
 resource "google_storage_bucket" "tfstate_bucket" {
-  name = "tfstate-${data.google_project.project.number}"
+  name = "${data.google_project.project.number}-tfstate"
   location = local.region
   storage_class = "STANDARD"
 }
@@ -36,6 +36,6 @@ terraform {
   #   to start using the backend
 
   backend "gcs" {
-    bucket = "tfstate-127296570571"
+    bucket = "127296570571-tfstate"
   }
 }
