@@ -9,7 +9,6 @@ resource "google_project_iam_custom_role" "qnap_backup_manager" {
   title   = "QNAP Backup Manager"
   permissions = [
     "resourcemanager.projects.get",
-    "storage.buckets.list",
     "storage.buckets.get",
     "storage.buckets.list",
     "storage.buckets.update"
