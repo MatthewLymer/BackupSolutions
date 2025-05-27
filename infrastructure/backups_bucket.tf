@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "default" {
   name          = "${google_project.default.number}-backups-default"
-  location      = local.region
+  location      = "northamerica-northeast1"
   storage_class = "NEARLINE"
 }
 

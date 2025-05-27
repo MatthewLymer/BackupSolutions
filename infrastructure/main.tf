@@ -1,5 +1,4 @@
 locals {
-  region          = "northamerica-northeast1"
   billing_account = "017629-BB9381-1C2281"
 
   project = {
@@ -9,7 +8,7 @@ locals {
 }
 
 provider "google" {
-  region  = local.region
+  # region  = local.region
   project = local.project.id
 }
 
